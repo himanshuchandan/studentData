@@ -36,16 +36,30 @@
         display: inline-block;
         margin: 0 auto;
       }
+      input[type=submit] {
+		  background-color: #4CAF50;
+		  border: none;
+		  color: white;
+		  padding: 16px 32px;
+		  text-decoration: none;
+		  margin: 4px 2px;
+		  cursor: pointer;
+	}
     </style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
+	<form action="showTable">
 		 <div class="card">
       <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
         <i class="checkmark">✓</i>
       </div>
         <h1>Success</h1> 
       </div>
+      <div>
+      <input type="submit" value="View The Entries"/>
+      </div>
+      </form>
 </body>
 </html>

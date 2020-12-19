@@ -23,4 +23,9 @@ public class AlienController {
 		repo.save(student);
 		return "result.jsp";
 	}
+	
+	@RequestMapping("/showTable")
+	public String showData() {
+		return "showdata.jsp";
+	}
 }
