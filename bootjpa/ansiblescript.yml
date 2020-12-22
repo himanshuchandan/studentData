@@ -49,19 +49,19 @@
        # - ca-certificates
        # - oracle-java8-set-default
     - name: Create Folder
-      file:
-        path: /home/ubuntu/tomcat
-        state: directory
-        mode: 0755
-        owner: ubuntu
-        group: ubuntu
-     - name: Download Tomcat
+        file:
+          path: /home/ubuntu/tomcat
+          state: directory
+          mode: 0755
+          owner: ubuntu
+          group: ubuntu
+    - name: Download Tomcat
         get_url: url=https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.27/bin/apache-tomcat-8.0.27.tar.gz dest-/home/ubuntu/tomcat 
-     - name: Extract archive
+    - name: Extract archive
         unarchive: src=/home/ubuntu/tomcat/apache-tomcat-8.0.27.tar.gz dest=/home/ubuntu/tomcat
-     - name: start apache tomcat-8.0.27
+    - name: start apache tomcat-8.0.27
         shell: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin/startup.sh
-     - name: copy war file 
+    - name: copy war file 
         shell: cp /var/lib/jenkins/workspace/student_data_101/bootjpa/target/bootjpa-0.0.1-SNAPSHOT.war /home/ubuntu/tomcat/apache-tomcat-8.0.27/webapps/
 #here ends tomcat
    # - name: Deploy war file
