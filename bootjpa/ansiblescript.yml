@@ -2,7 +2,6 @@
 - hosts: webservers 
   become: True
   tasks:
-   tasks:
   - name: Update APT package manager repositories cache
     become: true
     apt:
