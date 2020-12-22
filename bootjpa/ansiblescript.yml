@@ -23,5 +23,11 @@
       package: name=php-mysql state=present
     - name: "Install mysqlserver"
       package: name=mysql-server state=present
-    - name: Deploy static website
-      copy: src=/home/himanshuchandan94/index.html dest=/var/www/html/index.html.
+    - name: Update Lists
+      command: apt-get-update
+    - name: intall JDK
+      apt:
+        name: openjdk-11-jdk
+        state: present
+    - name: Deploy war file
+      copy: src=/var/lib/jenkins/workspace/student_data_101/bootjpa/target/bootjpa-0.0.1-SNAPSHOT.war dest=/var/www/html/
