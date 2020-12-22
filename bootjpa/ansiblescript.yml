@@ -56,13 +56,13 @@
         owner: ubuntu
         group: ubuntu
     - name: Download Tomcat
-        get_url: url=https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.27/bin/apache-tomcat-8.0.27.tar.gz dest-/home/ubuntu/tomcat 
+      get_url: url=https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.27/bin/apache-tomcat-8.0.27.tar.gz dest-/home/ubuntu/tomcat 
     - name: Extract archive
-        unarchive: src=/home/ubuntu/tomcat/apache-tomcat-8.0.27.tar.gz dest=/home/ubuntu/tomcat
+      unarchive: src=/home/ubuntu/tomcat/apache-tomcat-8.0.27.tar.gz dest=/home/ubuntu/tomcat
     - name: start apache tomcat-8.0.27
-        shell: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin/startup.sh
+      shell: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin/startup.sh
     - name: copy war file 
-        shell: cp /var/lib/jenkins/workspace/student_data_101/bootjpa/target/bootjpa-0.0.1-SNAPSHOT.war /home/ubuntu/tomcat/apache-tomcat-8.0.27/webapps/
+      shell: cp /var/lib/jenkins/workspace/student_data_101/bootjpa/target/bootjpa-0.0.1-SNAPSHOT.war /home/ubuntu/tomcat/apache-tomcat-8.0.27/webapps/
 #here ends tomcat
    # - name: Deploy war file
     #  copy: src=/var/lib/jenkins/workspace/student_data_101/bootjpa/target/bootjpa-0.0.1-SNAPSHOT.war dest=/var/www/html/
