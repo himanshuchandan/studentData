@@ -1,6 +1,9 @@
 ---
 - hosts: webservers 
-  become: True
+  become: yes
+  become_method: sudo
+  remote_user: himanshuchandan94
+  
   tasks:
     - name: Install packages
       apt:
