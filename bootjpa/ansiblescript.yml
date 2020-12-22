@@ -24,7 +24,7 @@
     - name: "Install mysqlserver"
       package: name=mysql-server state=present
     - name: Update Lists
-      command: apt-get-update
+      command: apt-get update
     - name: intall JDK
       apt:
         name: openjdk-11-jdk
