@@ -1,6 +1,7 @@
 ---
 - name: install apache & php & mysql
   hosts: hostservers
+  sudo: yes
   become: true
   become_user: root
   gather_facts: true
