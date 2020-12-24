@@ -13,12 +13,12 @@
       package: name=libapache2-mod-php state=present
     - name: "Install php-cli"
       package: name=php-cli state=present
-    - name: "Install php-dev"
-      package: name=php-dev state=present
-    - name: "Install php-pear"
-      package: name=php-pear state=present
-    - name: "Install php-gd"
-      package: name=php-gd state=present
+    #- name: "Install php-dev"
+    #  package: name=php-dev state=present
+    #- name: "Install php-pear"
+    #  package: name=php-pear state=present
+    #- name: "Install php-gd"
+    #  package: name=php-gd state=present
     - name: "Install php-mysql"
       package: name=php-mysql state=present
     - name: "Install mysqlserver"
@@ -27,7 +27,7 @@
       command: apt-get update
     - name: intall JDK
       apt:
-        name: openjdk-11-jdk
+        name: openjdk-8-jdk
         state: present
         # from here starts tomcat
     - name: Install add-apt-repostory
