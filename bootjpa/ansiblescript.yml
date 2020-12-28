@@ -56,7 +56,7 @@
        owner: ubuntu
        group: ubuntu
     - name: Download Tomcat
-      get_url: url=https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.27/bin/apache-tomcat-8.0.27.tar.gz dest=/home/ubuntu/tomcat 
+      get_url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.27/bin/apache-tomcat-8.0.27.tar.gz dest=/home/ubuntu/tomcat 
     - name: Extract archive
       unarchive: src=/home/ubuntu/tomcat/apache-tomcat-8.0.27.tar.gz dest=/home/ubuntu/tomcat remote_src= yes
     - name: start apache tomcat-8.0.27
