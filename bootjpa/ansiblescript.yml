@@ -5,14 +5,14 @@
   become_user: root
   gather_facts: true
   tasks:
-    - name: "Install apache2"
-      package: name=apache2 state=present
-    - name: "Install php"
-      package: name=php state=present
-    - name: "Install apache2-php5"
-      package: name=libapache2-mod-php state=present
-    - name: "Install php-cli"
-      package: name=php-cli state=present
+    #- name: "Install apache2"
+    #  package: name=apache2 state=present
+    #- name: "Install php"
+    #  package: name=php state=present
+    #- name: "Install apache2-php5"
+    #  package: name=libapache2-mod-php state=present
+    #- name: "Install php-cli"
+    #  package: name=php-cli state=present
     #- name: "Install php-dev"
     #  package: name=php-dev state=present
     #- name: "Install php-pear"
