@@ -62,7 +62,7 @@
        remote_src: yes
     - name: start apache tomcat-8.0.27
       shell:
-         cmd: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin
+         cmd: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin/
          cmd: ./startup.sh
     - name: copy war file 
       copy: 
