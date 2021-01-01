@@ -61,9 +61,10 @@
        dest: /home/ubuntu/tomcat 
        remote_src: yes
     - name: start apache tomcat-8.0.27
-      shell:
-         cmd: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin/
-         cmd: ./startup.sh
+    #  shell: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin/startup.sh
+      shell: ./startup.sh
+      args:
+        chdir: /home/ubuntu/tomcat/apache-tomcat-8.0.27/bin
     - name: copy war file 
       copy: 
        src: /var/lib/jenkins/workspace/student_data_101/bootjpa/target/bootjpa-0.0.1-SNAPSHOT.war 
