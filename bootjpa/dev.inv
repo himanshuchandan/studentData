@@ -1,2 +1,2 @@
 [hostservers]
-34.71.87.18 ansible_ssh_user=root
+34.68.174.34 ansible_ssh_user=root
